@@ -1,0 +1,13 @@
+<phpdox xmlns="http://phpdox.net/config">
+ <project name="hello world" source="./src" workdir="./">
+  <collector publiconly="false">
+   <include mask="*.php" />
+   <exclude mask="**/library/Zend/**" />
+  </collector>
+
+  <generator output="./build/docs">
+   <build engine="html" output="html">
+   </build>
+  </generator>
+ </project>
+</phpdox>

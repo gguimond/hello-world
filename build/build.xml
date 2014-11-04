@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="helloworld" default="ci" basedir="./">
+    <property name="origin" value="C:\Program Files (x86)\wamp\www\helloworld" />
+    <property name="source" value="${project.basedir}/src" />
+    <property name="tests" value="${project.basedir}/src/tests" />
+    <property name="build" value="${project.basedir}/src/build" />
+    <property name="toolsdir" value=""/>
+
+    <target name="build"
+        description="Tâche principale d'intégration continue"
+        depends="clean,prepare,qa"
+    />
+
+    <target name="clean" description="Vide les répertoires d'artefacts">
+        <delete includeemptydirs="true" failonerror="true">
+            <fileset dir="${source}">
+            <exclude name="library/Zend/**" />   
+            </fileset>
+        </delete>
+    </target>
+    
+    <target name="prepare" description="Copie les répertoires du projet dans le worksapce jenkins">
+        <copy todir="${source}" overwrite="true" >
+            <fileset dir="${origin}">
+            <exclude name="library/Zend/**" />   
+            </fileset>
+        </copy>
+    </target>
+		
+    <target name="qa" description="Lance les outils d'analyse">
+		<phingcall target="phpunit"/>
+		<!-- <phingcall target="phpdox"/> -->
+    </target>
+    
+    <target name="phpunit"
+         description="Run unit tests with PHPUnit">
+	  <exec executable="${toolsdir}phpunit" passthru="true">
+	   <arg value="--configuration"/>
+	   <arg path="${tests}/phpunit.xml"/>
+	  </exec>
+	 </target>
+	 
+    <target name="phpdox">
+	    <exec executable="${toolsdir}php" passthru="true">
+	        <arg value="C:\Program Files (x86)\wamp\bin\php\php5.3.13\phpdox.phar" />
+            <arg value="--file"/>
+            <arg path="${build}/docs/phpdox.xml" />
+        </exec>
+	</target>
+
+</project>

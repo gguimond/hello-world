@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="1" assertions="3" failures="0" errors="0" time="43.602463">
+    <testsuite name="Application Test Suite" tests="1" assertions="3" failures="0" errors="0" time="43.602463">
+      <testsuite name="IndexControllerTest" file="C:\Program Files (x86)\wamp\www\helloworld\tests\application\controllers\IndexControllerTest.php" tests="1" assertions="3" failures="0" errors="0" time="43.602463">
+        <testcase name="testIndex" class="IndexControllerTest" file="C:\Program Files (x86)\wamp\www\helloworld\tests\application\controllers\IndexControllerTest.php" line="12" assertions="3" time="43.602463">
+          <system-out>C:\Program Files (x86)\wamp\www\helloworld\application/controllerstitre
+indexguest</system-out>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
