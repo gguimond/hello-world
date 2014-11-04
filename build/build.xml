@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="helloworld" default="ci" basedir="./">
     <property name="origin" value="C:\Program Files (x86)\wamp\www\helloworld" />
-    <property name="source" value="${project.basedir}/src" />
-    <property name="tests" value="${project.basedir}/src/tests" />
-    <property name="build" value="${project.basedir}/src/build" />
+    <property name="source" value="${project.basedir}" />
+    <property name="tests" value="${project.basedir}/tests" />
+    <property name="build" value="${project.basedir}/build" />
     <property name="toolsdir" value=""/>
 
     <target name="build"
