@@ -29,7 +29,7 @@
 		
     <target name="qa" description="Lance les outils d'analyse">
 		<phingcall target="phpunit"/>
-		<phingcall target="phpdox"/>
+		<!-- <phingcall target="phpdox"/>-->
     </target>
     
     <target name="phpunit"
