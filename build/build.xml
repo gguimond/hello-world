@@ -8,7 +8,7 @@
 
     <target name="build"
         description="Tâche principale d'intégration continue"
-        depends="clean,prepare,qa"
+        depends="clean,prepare"
     />
 
     <target name="clean" description="Vide les répertoires d'artefacts">
