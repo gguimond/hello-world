@@ -1,11 +1,11 @@
 <phpdox xmlns="http://phpdox.net/config">
- <project name="hello world" source="./src" workdir="./">
+ <project name="hello world" source="${basedir}/../../" workdir="${basedir}/xml">
   <collector publiconly="false">
    <include mask="*.php" />
    <exclude mask="**/library/Zend/**" />
   </collector>
 
-  <generator output="./build/docs">
+  <generator output="${basedir}/">
    <build engine="html" output="html">
    </build>
   </generator>
