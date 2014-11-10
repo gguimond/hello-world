@@ -8,7 +8,7 @@
 
     <target name="build"
         description="Tâche principale d'intégration continue"
-        depends="clean,prepare"
+        depends="qa"
     />
 
     <target name="clean" description="Vide les répertoires d'artefacts">
@@ -29,7 +29,7 @@
 		
     <target name="qa" description="Lance les outils d'analyse">
 		<phingcall target="phpunit"/>
-		<!-- <phingcall target="phpdox"/> -->
+		<phingcall target="phpdox"/>
     </target>
     
     <target name="phpunit"
